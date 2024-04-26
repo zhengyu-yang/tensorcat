@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "tensorcat"
+version = "0.1.2"
+description = ""
+authors = ["Zhengyu Yang <25852061+zhengyu-yang@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pillow = "^9.5.0"
+numpy = "^1.22.4"
+iPython = "^8.4.0"
+
+[tool.poetry.group.dev.dependencies]
+torch = "^2.0.0"
+
+[tool.poetry.scripts]
+tensorcat = "tensorcat.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
