@@ -42,6 +42,10 @@ def img2str(
         str: Control sequence to display or download an image
     """
     img_file = BytesIO()
+
+    if img.mode in ("RGBA", "P"): 
+        img = img.convert("RGB")
+
     img.save(img_file, format="JPEG")
     img_b64 = img_file.getvalue()
     img_size = img_file.getbuffer().nbytes
